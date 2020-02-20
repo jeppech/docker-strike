@@ -25,3 +25,7 @@ RUN chmod +x ${SERVER_DIR}/update.sh
 USER ${USER}
 RUN curl http://media.steampowered.com/client/steamcmd_linux.tar.gz | tar -C ${SERVER_DIR} -xvzf -
 RUN ${SERVER_DIR}/update.sh
+
+WORKDIR ${SERVER_DIR}
+
+CMD 
